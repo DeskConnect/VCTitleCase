@@ -63,7 +63,7 @@ NSString * VCTitleCaseString(NSString *input) {
     [scanner setCaseSensitive:YES];
 
     // Begin scanning for words.
-    NSRange currentRange;        // Range of word located by scanner
+    NSRange currentRange = {};   // Range of word located by scanner
     NSString *word;              // Extracted word
     NSString *lowercaseWord;     // Lowercase version of extracted word
     NSRange ignoreTriggerRange;  // Range of character causing word to be ignored
