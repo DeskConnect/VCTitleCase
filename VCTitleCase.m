@@ -89,7 +89,7 @@ NSString * VCTitleCaseString(NSString *input) {
                  
         // See if the next character is a valid word character, and if so,
         // scan through the end of the word.
-        if ([wordMiddleCharacterSet characterIsMember:[input characterAtIndex:[scanner scanLocation]]]) {
+        if (input.length > scanner.scanLocation && [wordMiddleCharacterSet characterIsMember:[input characterAtIndex:[scanner scanLocation]]]) {
             [scanner scanCharactersFromSet:wordMiddleCharacterSet
                                 intoString:NULL];
             currentRange.length = [scanner scanLocation] - currentRange.location;
